@@ -1,7 +1,6 @@
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path'
+import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
@@ -9,6 +8,11 @@ export default defineConfig({
     alias: [
       { find: '@', replacement: path.resolve(__dirname, 'src') }
     ],
+  },
+  build: {
+    rollupOptions: {
+      external: ['@highlightjs/cdn-assets']
+    },
   },
   server: {
     headers: {
