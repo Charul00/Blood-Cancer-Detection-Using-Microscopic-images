@@ -159,7 +159,7 @@ const Project = () => {
                     ])
 
                     try {
-                        const response = await axios.post('http://localhost:14000/api/ai/generate-ui', {
+                        const response = await axios.post('https://ai-powered-backend.onrender.com', {
                             imageData,
                         }, {
                             headers: {
